@@ -6,8 +6,13 @@ sg.theme('DarkPurple5')
 nome_da_musica = [[sg.Text(text='press play..', justification = 'center', background_color = 'blue',
              text_color= 'black', size = (200.0), font = 'tahoma', key = 'song_name')]] 
 
+Player_info = [
+    [sg.Text('MP3 player by Tiago Dmasceno', background_color='black', text_color='white', font=('tahoma', 7) )]
+]
 
-
+currently_playing = [
+    [sg.Text(background_color='black', text_color='white', size='200')]
+]
 # 1 criar um player de musica
     #1.1 criar uma playlist
     #1.2 fazer a play list tocar
