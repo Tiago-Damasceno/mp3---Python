@@ -1,10 +1,10 @@
 import os
 from pygame import mixer
-mixer.init
+mixer.init()
 
-def get_diretorios(directory):
+def get_files_inside_directory_not_recursive(songs):
     directories = []
-    for (root, dir, files) in os.walk(directory):
+    for (root, directories, files) in os.walk(songs):
         for file in files:
             directories.append(root + os.sep + file)
 
@@ -16,10 +16,10 @@ def play_sound(sound_path):
     mixer.music.load(sound_path)
     mixer.music.play()
 
-def stop_sound():
+def stop_sounds():
     mixer.music.stop
 
-def pause_sound():
+def pause_sounds():
     mixer.music.pause()
 
 def unpause ():
