@@ -15,7 +15,7 @@ currently_playing = [
     [sg.Text(background_color='black', text_color='white', size=(200,0), font= ('tahoma',10), key= 'currently_playing')]
 ]
 
-
+ #2.3 criar botões play e pause
 ALBUM_COVER_IMAGE_PATH = 'images\\Capa.png'
 PLAY_SONG_IMAGE_PATH = 'images\\play.png'
 GO_BACK_IMAGE_PATH = 'images\\back.png'
@@ -23,12 +23,13 @@ PAUSE_SONG_IMAGE_PATH = 'images\\stop.png'
 GO_FORWARD_IMAGE_PATH = 'images\\next.png'
 
 
-
-
+# 2 criar uma aba para aparecer o player
+     #2.1 criar uma aba grande  
 main = [
     [sg.Canvas(background_color='black', size=(480, 20), pad=None)],
     [sg.Column(layout=player_info, justification='c',
                element_justification='c', background_color='black')],
+    #2.2 colocar uma iamgem da banda no meio
     [
         sg.Canvas(background_color='black', size=(40, 350), pad=None),
         sg.Image(filename=ALBUM_COVER_IMAGE_PATH,
@@ -55,6 +56,10 @@ main = [
 
 
 ]
+# 3 fazer a aba dar play e pause na musica 
+    # Fazer o botão dar play
+    #fazer o botão dar pause
+
 window = sg.Window('spotfy', layout=main, size=(480, 730), background_color='black', finalize=True, grab_anywhere=True, resizable=False)
 
 directory = sg.popup_get_folder('Select Music Directory')
@@ -110,18 +115,12 @@ while True:
             print('Reached first song')
 
 
-# 1 criar um player de musica
-    #1.1 criar uma playlist
-    #1.2 fazer a play list tocar
-    #1.3 transportar a playlist para a aba interativa
 
-# 2 criar uma aba para aparecer o player
-    #2.1 criar uma aba grande
-    #2.2 colocar uma iamgem da banda no meio
-    #2.3 criar botões play e pause
 
-# 3 fazer a aba dar play e pause na musica 
-    # Fazer o botão dar play
-    #fazer o botão dar pause
+
+   
+    
+   
+
 
     

@@ -2,6 +2,11 @@ import os
 from pygame import mixer
 mixer.init()
 
+# 1 criar um player de musica
+    #1.1 criar uma playlist
+    #1.2 fazer a play list tocar
+    #1.3 transportar a playlist para a aba interativa
+
 def get_files_inside_directory_not_recursive(songs):
     directories = []
     for (root, directories, files) in os.walk(songs):
